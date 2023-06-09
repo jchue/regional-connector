@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps(['line']);
 
-function lineLetter(line) {
+function lineLetter(line: string) {
   if (line === 'e-old' || line === 'e-new') {
     return 'E';
   }

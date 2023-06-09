@@ -1,19 +1,21 @@
 <script setup lang="ts">
 defineProps(['last', 'layout']);
 
-function next(e) {
-  let el = e.currentTarget;
-  while ((el = el.parentNode) && el.className.indexOf('slide') < 0);
+function next(e: Event) {
+  const currentSlide = (e.currentTarget as HTMLElement).closest('.slide');
+  if (currentSlide === null) return;
 
-  const currentId = el.getAttribute('id');
+  const currentId = currentSlide.getAttribute('id');
+  if (currentId === null) return;
+
   const currentIndex = parseInt(currentId.split('-')[1], 10);
 
   const nextIndex = currentIndex + 1;
   const nextId = `slide-${nextIndex}`;
   const nextSlide = document.getElementById(nextId);
+  if (nextSlide === null) return;
 
   nextSlide.scrollIntoView();
-  
   return;
 }
 </script>
