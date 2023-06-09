@@ -80,6 +80,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p {
+  line-height: 1.75;
+  margin: 0 0 2rem 0;
+}
+
 a {
   border-radius: 0.25rem;
   color: rgb(0, 67, 212);
@@ -89,6 +94,10 @@ a {
 
 a:hover {
   background-color: rgba(0, 67, 212, 0.2);
+}
+
+img {
+  max-width: 100%;
 }
 
 button {

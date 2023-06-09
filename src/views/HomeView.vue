@@ -163,29 +163,30 @@ onMounted(() => {
   </Slide>
 
   <Slide layout="figure-full">
-    <p class="center" style="margin-bottom: 0;">Here is a before-after look at the entire system with the Regional Connector marked in black:</p>
+    <template v-slot:caption-top>
+      <p class="center" style="margin-bottom: 0;">Here is a before-after look at the entire system with the Regional Connector marked in black:</p>
+    </template>
 
-    <div class="figure">
-
+    <template v-slot:figure>
       <img alt="" src="@/assets/system-before.png" />
 
       <img alt="" src="@/assets/system-after-rc.png" />
-    </div>
+    </template>
 
-    <p class="center" style="margin-bottom: 0;">It is a relatively small length of track, but it completely revolutionizes and streamlines the LA Metro Rail system.</p>
+    <template v-slot:caption-bottom>
+      <p class="center">It is a relatively small length of track, but it completely revolutionizes and streamlines the LA Metro Rail system.</p>
+    </template>
   </Slide>
 
-  <Slide layout="figure-full" last="true">
-    <p class="center">Here are some resources if you want to learn more:</p>
+  <Slide last="true">
+    <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+      <p class="center">Here are some resources if you want to learn more:</p>
 
-    <a href="https://www.metro.net/projects/connector-2/" target="_blank">LA Metro Project Page</a>
-    <a href="https://www.metro.net/moredtla/" target="_blank">LA Metro Regional Connector Opening Site</a>
-    <a href="https://en.wikipedia.org/wiki/Regional_Connector" target="_blank">Wikipedia Page</a>
+      <ul>
+        <li><a href="https://www.metro.net/projects/connector-2/" target="_blank">LA Metro Project Page</a></li>
+        <li><a href="https://www.metro.net/moredtla/" target="_blank">LA Metro Regional Connector Opening Site</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Regional_Connector" target="_blank">Wikipedia Page</a></li>
+      </ul>
+    </div>
   </Slide>
 </template>
-
-<style scoped>
-img {
-  max-width: 100%;
-}
-</style>

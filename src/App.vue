@@ -17,15 +17,6 @@ import { RouterLink, RouterView } from 'vue-router';
   text-align: center;
 }
 
-p {
-  line-height: 1.75;
-  margin: 0 0 2rem 0;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
 .title {
   font-size: 3rem;
   font-weight: bold;

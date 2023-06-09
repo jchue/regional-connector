@@ -32,7 +32,9 @@ function next(e) {
   </div>
 
   <div v-else-if="layout === 'figure'" class="slide figure">
-    <slot name="figure"></slot>
+    <figure>
+      <slot name="figure"></slot>
+    </figure>
 
     <div class="caption">
       <slot></slot>
@@ -42,12 +44,22 @@ function next(e) {
   </div>
 
   <div v-else-if="layout === 'figure-full'" class="slide figure-full">
-      <slot></slot>
+    <div class="caption">
+      <slot name="caption-top"></slot>
+    </div>
 
-    <button v-if="!last" v-on:click="next">Next</button>
+    <figure>
+      <slot name="figure"></slot>
+    </figure>
+
+    <div class="caption">
+      <slot name="caption-bottom"></slot>
+
+      <button v-if="!last" v-on:click="next">Next</button>
+    </div>
   </div>
 
-  <div v-else class="slide">
+  <div v-else class="slide default">
     <slot></slot>
 
     <button v-if="!last" v-on:click="next">Next</button>
@@ -58,6 +70,7 @@ function next(e) {
 .slide {
   min-height: 100vh;
   margin-bottom: 4rem;
+  padding-bottom: 4rem;
   position: relative;
 }
 
@@ -66,6 +79,7 @@ function next(e) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 2rem;
 }
 
 .header button {
@@ -78,7 +92,13 @@ function next(e) {
   flex-direction: column;
   font-size: 2rem;
   justify-content: center;
-  margin: 0 4rem;
+  padding: 0 2rem;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 0 4rem;
+  }
 }
 
 .hero p {
@@ -93,7 +113,18 @@ function next(e) {
   align-items: center;
   display: grid;
   gap: 2rem;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr;
+}
+
+.figure figure {
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .figure {
+    grid-template-columns: 3fr 2fr;
+    padding: 0;
+  }
 }
 
 .figure-full {
@@ -105,23 +136,64 @@ function next(e) {
   justify-items: center;
 }
 
-.figure-full .figure {
+.figure-full figure {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   width: 100%;
+}
+
+@media (min-width: 640px) {
+  .figure-full figure {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 .caption {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 2rem;
   padding-right: 2rem;
 }
 
-.figure button {
-  bottom: 0;
-  position: absolute;
-  right: 0;
+@media (min-width: 1024px) {
+  .caption {
+    padding-left: 0;
+  }
+
+  .figure .caption {
+    padding-right: 2rem;
+  }
+
+  .figure-full .caption {
+    padding-right: 0;
+  }
+}
+
+.figure button,
+.figure-full button {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .figure button {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    width: auto;
+  }
+
+  .figure-full button {
+    align-self: center;
+    width: auto;
+  }
+}
+
+.default {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 </style>
