@@ -1,26 +1,50 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
   <RouterView />
+
+  <footer id="site-footer">
+    This site is in no way affiliated with the Los Angeles County Metropolitan Transportation Authority.
+  </footer>
 </template>
 
-<style scoped>
+<style>
+#site-footer {
+  font-size: 1rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+p {
+  line-height: 1.75;
+  margin: 0 0 2rem 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.footnote {
+  bottom: 1rem;
+  font-size: 1rem;
+  left: 2rem;
+  position: absolute;
+}
+
+.center {
+  text-align: center;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
