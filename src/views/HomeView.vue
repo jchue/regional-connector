@@ -195,6 +195,12 @@ onMounted(() => {
         <li><a href="https://www.metro.net/projects/connector-2/" target="_blank">LA Metro Project Page</a></li>
         <li><a href="https://www.metro.net/moredtla/" target="_blank">LA Metro Regional Connector Opening Site</a></li>
         <li><a href="https://en.wikipedia.org/wiki/Regional_Connector" target="_blank">Wikipedia Page</a></li>
+        <li><a href="https://thesource.metro.net/2023/05/22/the-regional-connector-and-three-new-downtown-l-a-stations-to-open-friday-june-16-with-a-weekend-of-free-rides/" target="_blank">Opening Announcement Post from <em>The Source</em></a></li>
+      </ul>
+
+      <ul class="horizontal-list">
+        <li><a href="https://www.dropbox.com/s/n26bfce3iwv5fbd/A%20Line_801_TT_06-16-23.pdf" target="_blank">New <LineIcon line="a" /> Line Timetable</a></li>
+        <li><a href="https://www.dropbox.com/s/gdatfhgct7etugu/E%20Line_804_TT_06-16-23.pdf" target="_blank">New <LineIcon line="e-new" /> Line Timetable</a></li>
       </ul>
     </div>
   </Slide>

@@ -85,6 +85,11 @@ p {
   margin: 0 0 2rem 0;
 }
 
+ol,
+ul {
+  margin-bottom: 2rem;
+}
+
 a {
   border-radius: 0.25rem;
   color: rgb(0, 67, 212);

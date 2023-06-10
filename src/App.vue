@@ -13,7 +13,8 @@ import { RouterLink, RouterView } from 'vue-router';
 <style>
 #site-footer {
   font-size: 1rem;
-  padding: 2rem 0;
+  line-height: 1.3;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -34,6 +35,26 @@ import { RouterLink, RouterView } from 'vue-router';
 
 .center {
   text-align: center;
+}
+
+.horizontal-list {
+  padding-left: 0;
+}
+
+.horizontal-list li {
+  list-style-type: none;
+}
+
+@media (min-width: 640px) {
+  .horizontal-list li {
+    border-right: 1px solid var(--color-text);
+    display: inline-block;
+    padding: 0 1.5rem;
+  }
+
+  .horizontal-list li:last-child {
+    border-right: none;
+  }
 }
 
 header {
