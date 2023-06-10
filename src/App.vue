@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
+import GitHubIcon from '@/components/GitHubIcon.vue';
 </script>
 
 <template>
   <RouterView />
 
   <footer id="site-footer">
-    This site is in no way affiliated with the Los Angeles County Metropolitan Transportation Authority.
+    <p>This site is in no way affiliated with the Los Angeles County Metropolitan Transportation Authority.</p>
+    
+    <p>Leave comments and suggestions on <a href="https://github.com/jchue/regional-connector" target="_blank"><span style="display: inline-flex; align-items: center; gap: 0.25rem; margin: 0 0.25rem;"><GitHubIcon /> GitHub</span></a>.</p>
   </footer>
 </template>
 
@@ -16,6 +19,10 @@ import { RouterLink, RouterView } from 'vue-router';
   line-height: 1.3;
   padding: 2rem;
   text-align: center;
+}
+
+#site-footer p {
+  margin-bottom: 1rem;
 }
 
 .title {
