@@ -47,42 +47,42 @@ onMounted(() => {
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
-      <img alt="" src="@/assets/route.png" />
+      <img alt="" src="@/assets/route-before.png" />
     </template>
 
     <p>This means that if you were at the Natural History Museum and wanted to get to the Japanese American National Museum, you would need to:</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
-      <img alt="" src="@/assets/route-1.png" />
+      <img alt="" src="@/assets/route-before-1.png" />
     </template>
 
     <p>Board the <LineIcon line="e" /> Line at Expo Park/USC and ride it four stops to its terminus at 7th Street / Metro Center.</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
-      <img alt="" src="@/assets/route-2.png" />
+      <img alt="" src="@/assets/route-before-2.png" />
     </template>
 
     <p>Get off the train, head downstairs, transfer to the <LineIcon line="b" /> or <LineIcon line="d" /> Line (arrives every 7.5 minutes if you are very lucky).</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
-      <img alt="" src="@/assets/route-3.png" />
+      <img alt="" src="@/assets/route-before-3.png" />
     </template>
 
     <p>Take the <LineIcon line="b" /> or <LineIcon line="d" /> Line for three stops to the terminus at Union Station.</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
-      <img alt="" src="@/assets/route-4.png" />
+      <img alt="" src="@/assets/route-before-4.png" />
     </template>
 
     <p>Get off the train, head upstairs, walk across the station to the platform of the <LineIcon line="l" /> Line (arrives every 10 minutes if you are lucky).</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
-      <img alt="" src="@/assets/route-5.png" />
+      <img alt="" src="@/assets/route-before-5.png" />
     </template>
 
     <p>Take the <LineIcon line="l" /> Line one stop to Little Tokyo / Arts District*.</p>
