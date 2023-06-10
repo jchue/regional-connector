@@ -109,15 +109,24 @@ onMounted(() => {
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
-      <img alt="" src="@/assets/l-after.png" />
+      <img alt="" src="@/assets/l-split.png" />
     </template>
 
     <div>
       <p>And here is its new configuration.</p>
       
-      <p>The northern portion will be converted to be part of the <LineIcon line='a' /> Line, and the eastern portion will be converted to be part of the <LineIcon line='e' /> Line. However, the E Line will adopt the color of the former L Line and will become the <LineIcon line='e-new' /> Line.</p>
+      <p>The northern portion will be converted to be part of the <LineIcon line='a' /> Line, and the southern portion will be converted to be part of the <LineIcon line='e' /> Line.</p>
+    </div>
+  </Slide>
+  <Slide layout="figure">
+    <template v-slot:figure>
+      <img alt="" src="@/assets/l-after.png" />
+    </template>
 
-      <p>This is because the <LineIcon line='l' /> Line will be going away, and a yellow <LineIcon line='e-new' /> is easier than an aqua <LineIcon line='e-old' /> to differentiate from the blue <LineIcon line='a' />.</p>
+    <div>
+      <p>Except one thing. The E Line will adopt the color of the former L Line and will become the <LineIcon line='e-new' /> Line.</p>
+
+      <p>Since the <LineIcon line='l' /> Line will be going away, a yellow <LineIcon line='e-new' /> is easier than an aqua <LineIcon line='e-old' /> to differentiate from the blue <LineIcon line='a' />.</p>
     </div>
   </Slide>
   <Slide layout="figure">
@@ -159,7 +168,7 @@ onMounted(() => {
   </Slide>
 
   <Slide layout="hero">
-    <p>That's it.</p>
+    <p>That's it. And it takes less than 20 minutes.</p>
   </Slide>
 
   <Slide layout="figure-full">
