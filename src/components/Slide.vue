@@ -24,7 +24,7 @@ function next(e: Event) {
   <div v-if="layout === 'header'" class="slide header">
       <slot></slot>
 
-      <button v-if="!last" v-on:click="next">Start</button>
+      <button v-if="!last" v-on:click="next">Begin</button>
   </div>
 
   <div v-else-if="layout === 'hero'" class="slide hero">

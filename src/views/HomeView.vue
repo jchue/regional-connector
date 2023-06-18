@@ -13,13 +13,13 @@ onMounted(() => {
 
 <template>
   <Slide layout="header">
-    <span class="title">LA Metro Regional Connector Explained</span>
+    <span class="title">🚇 LA Metro Regional Connector Explained</span>
   </Slide>
 
   <Slide layout="hero">
-    <p>The Regional Connector opens June 16th. It will be a complete game-changer for the LA Metro system.</p>
+    <p>The Regional Connector opened on June 16th. 🎉</p>
     
-    <p>Here's why.</p>
+    <p>It is a complete game-changer for the LA Metro system. Here's why.</p>
   </Slide>
 
   <Slide layout="figure">
@@ -30,9 +30,9 @@ onMounted(() => {
     <div>
       <p>This is the LA Metro rail system before June 2023.</p>
       
-      <p>The <LineIcon line="b"/> and <LineIcon line="d"/> Lines are heavy rail. The <LineIcon line="a"/> <LineIcon line="e"/> <LineIcon line="l"/> Lines, as well as the <LineIcon line="c"/> and <LineIcon line="k"/> Lines, are light rail.</p>
+      <p>The <LineIcon line="b"/> and <LineIcon line="d"/> Lines are heavy rail. The <LineIcon line="a"/> <LineIcon line="e"/> <LineIcon line="l"/> Lines, as well as the <LineIcon line="c"/> and <LineIcon line="k"/> Lines, were light rail.</p>
 
-      <p>Notice the peculiar shape of the <LineIcon line="l" /> Line. And notice how most of the lines seem to originate or terminate downtown. A relic of the days when most people commuted downtown for work, this is in and of itself suboptimal, since many, or even most, people do not want to go downtown anymore, and because it creates a bottleneck.</p>
+      <p>Notice the peculiar shape of the <LineIcon line="l" /> Line. And notice how most of the lines seemed to originate or terminate downtown. A relic of the days when most people commuted downtown for work, this was in and of itself suboptimal, since many, or even most, people do not want to go downtown anymore, and because it created a bottleneck.</p>
 
       <p>But let's take a closer look...</p>
     </div>
@@ -43,7 +43,7 @@ onMounted(() => {
       <img alt="" src="@/assets/downtown.png" />
     </template>
 
-    <p>Even though these lines go downtown, they terminate in different locations.</p>
+    <p>Even though these lines go downtown, they terminated in different locations.</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
@@ -85,12 +85,10 @@ onMounted(() => {
       <img alt="" src="@/assets/route-before-5.png" />
     </template>
 
-    <p>Take the <LineIcon line="l" /> Line one stop to Little Tokyo / Arts District*.</p>
-
-    <span class="footnote">*As part of the project, the Little Tokyo / Arts District is being relocated around the corner and underground, so this station is currently closed.</span>
+    <p>Take the <LineIcon line="l" /> Line one stop to Little Tokyo / Arts District.</p>
   </Slide>
   <Slide layout="hero">
-    <p>This trip is less than 6 miles, but it can take upward of 45 minutes. And it's faster to walk some portions.</p>
+    <p>This trip was less than 6 miles, but it could take upward of 45 minutes. And it wass faster to walk some portions.</p>
   </Slide>
 
   <Slide layout="figure">
@@ -98,14 +96,14 @@ onMounted(() => {
       <img alt="" src="@/assets/rc.png" />
     </template>
 
-    <p>The Regional Connector adds a 1.9-mile tunnel to connect the disparate light-rail lines in Downtown.</p>
+    <p>The Regional Connector added a 1.9-mile tunnel to connect the disparate light-rail lines in Downtown.</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
       <img alt="" src="@/assets/l-before.png" />
     </template>
 
-    <p>As part of the project, the <LineIcon line="l" /> Line will be reconfigured. Here is its prior configuration.</p>
+    <p>As part of the project, the <LineIcon line="l" /> Line was reconfigured. Here is its prior configuration.</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
@@ -124,9 +122,9 @@ onMounted(() => {
     </template>
 
     <div>
-      <p>Except one thing. The E Line will adopt the color of the former L Line and will become the <LineIcon line='e-new' /> Line.</p>
+      <p>Except one thing. The E Line adopted the color of the former L Line and became the <LineIcon line='e-new' /> Line.</p>
 
-      <p>Since the <LineIcon line='l' /> Line will be going away, a yellow <LineIcon line='e-new' /> is easier than an aqua <LineIcon line='e-old' /> to differentiate from the blue <LineIcon line='a' />.</p>
+      <p>Since the <LineIcon line='l' /> Line went away, a yellow <LineIcon line='e-new' /> is easier than an aqua <LineIcon line='e-old' /> to differentiate from the blue <LineIcon line='a' />.</p>
     </div>
   </Slide>
   <Slide layout="figure">
@@ -134,7 +132,7 @@ onMounted(() => {
       <img alt="" src="@/assets/focus-before.png" />
     </template>
 
-    <p>As a result, the <LineIcon line='a' /> <LineIcon line='e-old' /> and <LineIcon line='l' /> Lines will go from this...</p>
+    <p>As a result, the <LineIcon line='a' /> <LineIcon line='e-old' /> and <LineIcon line='l' /> Lines went from this...</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
