@@ -28,11 +28,11 @@ onMounted(() => {
     </template>
 
     <div>
-      <p>This is the LA Metro rail system before June 2023.</p>
+      <p>This is a map of the LA Metro rail system before June 2023.</p>
       
-      <p>The <LineIcon line="b"/> and <LineIcon line="d"/> Lines are heavy rail. The <LineIcon line="a"/> <LineIcon line="e"/> <LineIcon line="l"/> Lines, as well as the <LineIcon line="c"/> and <LineIcon line="k"/> Lines, were light rail.</p>
+      <p>The <LineIcon line="b"/> and <LineIcon line="d"/> Lines are heavy rail. The <LineIcon line="a"/> <LineIcon line="e"/> <LineIcon line="l"/> Lines, as well as the <LineIcon line="c"/> and <LineIcon line="k"/> Lines, are light rail.</p>
 
-      <p>Notice the peculiar shape of the <LineIcon line="l" /> Line. And notice how most of the lines seemed to originate or terminate downtown. A relic of the days when most people commuted downtown for work, this was in and of itself suboptimal, since many, or even most, people do not want to go downtown anymore, and because it created a bottleneck.</p>
+      <p>Notice the peculiar shape of the <LineIcon line="l" /> Line. And notice how most of the lines seem to originate or terminate downtown. A relic of the days when most people commuted downtown for work, this is in and of itself suboptimal, since many, or even most, people do not want to go downtown anymore, and because it created a bottleneck.</p>
 
       <p>But let's take a closer look...</p>
     </div>
@@ -43,7 +43,7 @@ onMounted(() => {
       <img alt="" src="@/assets/downtown.png" />
     </template>
 
-    <p>Even though these lines go downtown, they terminated in different locations.</p>
+    <p>Even though these lines go downtown, they terminate in different locations.</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
@@ -88,7 +88,7 @@ onMounted(() => {
     <p>Take the <LineIcon line="l" /> Line one stop to Little Tokyo / Arts District.</p>
   </Slide>
   <Slide layout="hero">
-    <p>This trip was less than 6 miles, but it could take upward of 45 minutes. And it wass faster to walk some portions.</p>
+    <p>This trip was less than 6 miles, but it could take upward of 45 minutes. And it was faster to walk some portions.</p>
   </Slide>
 
   <Slide layout="figure">
@@ -96,7 +96,7 @@ onMounted(() => {
       <img alt="" src="@/assets/rc.png" />
     </template>
 
-    <p>The Regional Connector added a 1.9-mile tunnel to connect the disparate light-rail lines in Downtown.</p>
+    <p>The Regional Connector adds a 1.9-mile tunnel to connect the disparate light-rail lines in Downtown.</p>
   </Slide>
   <Slide layout="figure">
     <template v-slot:figure>
