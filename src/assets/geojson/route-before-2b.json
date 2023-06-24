@@ -1,0 +1,75 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -118.2581795,
+                        34.0488192,
+                        0
+                    ],
+                    [
+                        -118.2569677,
+                        34.0480128,
+                        0
+                    ],
+                    [
+                        -118.2556695,
+                        34.0474933,
+                        0
+                    ],
+                    [
+                        -118.2537598,
+                        34.0475665,
+                        0
+                    ],
+                    [
+                        -118.2524295,
+                        34.048191,
+                        0
+                    ],
+                    [
+                        -118.2467861,
+                        34.0544135,
+                        0
+                    ],
+                    [
+                        -118.2444687,
+                        34.0566534,
+                        0
+                    ],
+                    [
+                        -118.2418294,
+                        34.0576934,
+                        0
+                    ],
+                    [
+                        -118.2391256,
+                        34.0576313,
+                        0
+                    ],
+                    [
+                        -118.2348163,
+                        34.0564221,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Segment 2 - B\n",
+                "styleUrl": "#line-FFCC80-2744-nodesc",
+                "styleHash": "1785961d",
+                "styleMapHash": {
+                    "normal": "#line-FFCC80-2744-nodesc-normal",
+                    "highlight": "#line-FFCC80-2744-nodesc-highlight"
+                },
+                "stroke": "#ffcc80",
+                "stroke-opacity": 1,
+                "stroke-width": 2.744
+            }
+        }
+    ]
+}

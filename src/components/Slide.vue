@@ -1,5 +1,23 @@
 <script setup lang="ts">
-defineProps(['last', 'layout']);
+defineProps(['buttonLabel', 'last', 'layout']);
+
+function back(e: Event) {
+  const currentSlide = (e.currentTarget as HTMLElement).closest('.slide');
+  if (currentSlide === null) return;
+
+  const currentId = currentSlide.getAttribute('id');
+  if (currentId === null) return;
+
+  const currentIndex = parseInt(currentId.split('-')[1], 10);
+
+  const nextIndex = currentIndex - 1;
+  const nextId = `slide-${nextIndex}`;
+  const nextSlide = document.getElementById(nextId);
+  if (nextSlide === null) return;
+
+  nextSlide.scrollIntoView();
+  return;
+}
 
 function next(e: Event) {
   const currentSlide = (e.currentTarget as HTMLElement).closest('.slide');
@@ -21,16 +39,19 @@ function next(e: Event) {
 </script>
 
 <template>
-  <div v-if="layout === 'header'" class="slide header">
+  <div v-if="layout === 'reset'" class="slide reset">
+  </div>
+
+  <div v-else-if="layout === 'header'" class="slide header">
       <slot></slot>
 
-      <button v-if="!last" v-on:click="next">Begin</button>
+      <button v-if="!last" v-on:click="next">{{ buttonLabel || 'Begin' }}</button>
   </div>
 
   <div v-else-if="layout === 'hero'" class="slide hero">
       <slot></slot>
 
-      <button v-if="!last" v-on:click="next">Next</button>
+      <button v-if="!last" v-on:click="next">{{ buttonLabel || 'Next' }}</button>
   </div>
 
   <div v-else-if="layout === 'figure'" class="slide figure">
@@ -41,7 +62,19 @@ function next(e: Event) {
     <div class="caption">
       <slot></slot>
 
-      <button v-if="!last" v-on:click="next">Next</button>
+      <button v-if="!last" v-on:click="next">{{ buttonLabel || 'Next' }}</button>
+    </div>
+  </div>
+
+  <div v-else-if="layout === 'map'" class="slide map">
+    <div class="map-space"></div>
+    <div class="caption">
+      <slot></slot>
+
+      <div class="navigation">
+        <button v-on:click="back" class="back">Back</button>
+        <button v-if="!last" v-on:click="next" class="next">{{ buttonLabel || 'Next' }}</button>
+      </div>
     </div>
   </div>
 
@@ -57,23 +90,28 @@ function next(e: Event) {
     <div class="caption">
       <slot name="caption-bottom"></slot>
 
-      <button v-if="!last" v-on:click="next">Next</button>
+      <button v-if="!last" v-on:click="next">{{ buttonLabel || 'Next' }}</button>
     </div>
   </div>
 
   <div v-else class="slide default">
     <slot></slot>
 
-    <button v-if="!last" v-on:click="next">Next</button>
+    <button v-if="!last" v-on:click="next">{{ buttonLabel || 'Next' }}</button>
   </div>
 </template>
 
 <style>
 .slide {
   min-height: 100vh;
-  margin-bottom: 4rem;
-  padding-bottom: 4rem;
   position: relative;
+}
+
+.reset {
+  min-height: 20px;
+  margin: 10rem;
+  padding: 0;
+  position: static;
 }
 
 .header {
@@ -90,11 +128,13 @@ function next(e: Event) {
 
 .hero {
   align-items: flex-start;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   font-size: 2rem;
   justify-content: center;
   padding: 0 2rem;
+  z-index: 20;
 }
 
 @media (min-width: 640px) {
@@ -130,12 +170,14 @@ function next(e: Event) {
 }
 
 .figure-full {
+  background-color: #fff;
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   align-content: center;
   justify-items: center;
+  z-index: 20;
 }
 
 .figure-full figure {
@@ -159,6 +201,53 @@ function next(e: Event) {
   padding-right: 2rem;
 }
 
+@media (max-width: 768px) {
+  .caption {
+    justify-content: flex-start;
+  }
+}
+
+.map {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.map .map-space {
+  height: 100vh;
+  width: 60%;
+}
+
+.map .caption {
+  box-shadow: -16px 0 16px -16px rgba(0, 0, 0, 0.2);
+  min-height: 100vh;
+  padding: 2rem 2rem 4rem 2rem;
+  position: relative;
+  width: 40%;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .map {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .map .map-space {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .map .caption {
+    box-shadow: none;
+    padding: 2rem 2rem 4rem 2rem;
+    min-height: 50vh;
+    width: 100%;
+  }
+}
+
 @media (min-width: 1024px) {
   .caption {
     padding-left: 0;
@@ -173,29 +262,45 @@ function next(e: Event) {
   }
 }
 
-.figure button,
-.figure-full button {
-  width: 100%;
+.figure .navigation,
+.map .navigation {
+  bottom: 0;
+  display: flex;
+  gap: 2px;
+  position: absolute;
+  right: 0;
 }
 
-@media (min-width: 640px) {
-  .figure button {
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    width: auto;
+.figure button,
+.map button {
+  width: auto;
+}
+
+.figure-full button {
+  align-self: center;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .figure .navigation,
+  .map .navigation {
+    display: flex;
+    width: 100%;
   }
 
-  .figure-full button {
-    align-self: center;
-    width: auto;
+  .figure button,
+  .figure-full button,
+  .map button {
+    width: 100%;
   }
 }
 
 .default {
+  background-color: #fff;
   display: flex;
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  z-index: 20;
 }
 </style>

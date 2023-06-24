@@ -1,0 +1,65 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -118.2347198,
+                        34.0564043,
+                        0
+                    ],
+                    [
+                        -118.2352351,
+                        34.0537426,
+                        0
+                    ],
+                    [
+                        -118.235514,
+                        34.0535115,
+                        0
+                    ],
+                    [
+                        -118.2358573,
+                        34.0534404,
+                        0
+                    ],
+                    [
+                        -118.237134,
+                        34.0535737,
+                        0
+                    ],
+                    [
+                        -118.2375256,
+                        34.0535514,
+                        0
+                    ],
+                    [
+                        -118.2377027,
+                        34.053227,
+                        0
+                    ],
+                    [
+                        -118.2379065,
+                        34.0496536,
+                        0
+                    ]
+                ]
+            },
+            "properties": {
+                "name": "Segment 3\n",
+                "styleUrl": "#line-F9A825-4681-nodesc",
+                "styleHash": "-23c9d7c7",
+                "styleMapHash": {
+                    "normal": "#line-F9A825-4681-nodesc-normal",
+                    "highlight": "#line-F9A825-4681-nodesc-highlight"
+                },
+                "stroke": "#f9a825",
+                "stroke-opacity": 1,
+                "stroke-width": 4.681
+            }
+        }
+    ]
+}

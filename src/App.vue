@@ -15,10 +15,13 @@ import GitHubIcon from '@/components/GitHubIcon.vue';
 
 <style>
 #site-footer {
+  background-color: #fff;
   font-size: 1rem;
   line-height: 1.3;
   padding: 2rem;
+  position: relative;
   text-align: center;
+  z-index: 10;
 }
 
 #site-footer p {

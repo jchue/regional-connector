@@ -116,6 +116,12 @@ button {
   transition: box-shadow 0.2s;
 }
 
+button.back {
+  background-color: #fff;
+  border: 2px solid var(--color-button-background);
+  color: var(--color-button-background);
+}
+
 button:hover {
   box-shadow: 0 0 1rem #000;;
 }
