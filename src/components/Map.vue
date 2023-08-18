@@ -108,6 +108,7 @@ function onMapReady() {
 .icon .icon-text span {
   color: #fff;
   display: block;
+  font-family: 'Nimbus Sans L', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
   margin-top: -8px;
@@ -117,7 +118,8 @@ function onMapReady() {
   background-color: #fff !important;
   border-radius: 0.5rem;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.8);
-  font-family: Inter, sans-serif;
+  font-family: 'Nimbus Sans L', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
   font-weight: bold;
   padding: 0.5rem 1rem;
 }
