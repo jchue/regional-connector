@@ -411,7 +411,7 @@ onMounted(() => {
           v-bind:data-center-lng="-118.2461"
           v-bind:data-zoom="14"
         >
-          <p>The Regional Connector adds a 1.9-mile tunnel to connect the disparate light-rail lines in Downtown.</p>
+          <p>The Regional Connector added a 1.9-mile tunnel to connect the disparate light-rail lines in Downtown.</p>
         </Slide>
 
         <Slide
@@ -453,7 +453,7 @@ onMounted(() => {
           <div>
             <p>And here is its new configuration.</p>
             
-            <p>The northern portion will be converted to be part of the <LineIcon line='a' /> Line, and the southern portion will be converted to be part of the <LineIcon line='e' /> Line.</p>
+            <p>The northern portion was converted to be part of the <LineIcon line='a' /> Line, and the southern portion was converted to be part of the <LineIcon line='e' /> Line.</p>
           </div>
         </Slide>
 
@@ -600,7 +600,6 @@ onMounted(() => {
         <p class="center">Here are some resources if you want to learn more:</p>
 
         <ul>
-          <li><a href="https://www.metro.net/projects/connector-2/" target="_blank">LA Metro Project Page</a></li>
           <li><a href="https://www.metro.net/moredtla/" target="_blank">LA Metro Regional Connector Opening Site</a></li>
           <li><a href="https://en.wikipedia.org/wiki/Regional_Connector" target="_blank">Wikipedia Page</a></li>
           <li><a href="https://thesource.metro.net/2023/05/22/the-regional-connector-and-three-new-downtown-l-a-stations-to-open-friday-june-16-with-a-weekend-of-free-rides/" target="_blank">Opening Announcement Post from <em>The Source</em></a></li>
