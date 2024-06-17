@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "L Line - North",
+        "name": "Metro A Line - Former Metro L Line Northern Segment",
         "color": "#0072bc"
       },
       "geometry": {
@@ -169,7 +169,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "L Line - South",
+        "name": "Metro E Line - Former Metro L Line Southern Segment",
         "color": "#fdb913"
       },
       "geometry": {

@@ -2,7 +2,7 @@
 import { onMounted, ref, watch } from 'vue';
 import { bbox } from '@turf/bbox';
 import { featureCollection, lineString } from '@turf/helpers';
-import { Map, Marker, NavigationControl, Popup } from 'maplibre-gl';
+import { Map, Marker, NavigationControl, Popup, type MapLayerEventType } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 import * as unchanged from '@/assets/geojson/unchanged.json';
@@ -266,6 +266,14 @@ const views: MapView[] = [
 
 const map = ref();
 const mapContainer = ref();
+const popup = ref(
+  new Popup({
+    closeButton: false,
+    closeOnClick: false,
+  }).trackPointer()
+);
+
+let hoveredLineIndex: string | number | undefined;
 
 let popups: Popup[] = [];
 let markers: Marker[] = [];
@@ -325,8 +333,43 @@ function addLines() {
       },
       paint: {
         'line-color': ['get', 'color'],
-        'line-width': 3,
+        'line-width': ['case', ['boolean', ['feature-state', 'hover'], false], 5, 3],
       },
+    });
+
+    map.value?.on('mousemove', 'lines', (e: MapLayerEventType['mousemove']) => {
+      // Stop hover from triggering lower layers
+      e.originalEvent.stopPropagation();
+
+      if (e.features != null && e.features.length > 0) {
+        // Emphasize line on hover
+        if (hoveredLineIndex !== undefined) {
+          map.value?.setFeatureState({ source: 'lines', id: hoveredLineIndex }, { hover: false });
+        }
+
+        hoveredLineIndex = e.features[0].id;
+
+        map.value?.setFeatureState({ source: 'lines', id: hoveredLineIndex }, { hover: true });
+
+        // Show popup on hover
+        const coordinates = e.lngLat;
+        const description = e.features[0].properties.name as string;
+
+        if (map.value != null)
+          popup.value.setLngLat(coordinates).setHTML(description).addTo(map.value);
+      }
+    });
+
+    map.value?.on('mouseleave', 'lines', () => {
+      // Hide popup
+      popup.value.remove();
+
+      // Remove emphasis
+      if (hoveredLineIndex !== undefined) {
+        map.value?.setFeatureState({ source: 'lines', id: hoveredLineIndex }, { hover: false });
+      }
+
+      hoveredLineIndex = undefined;
     });
   }
 
@@ -432,6 +475,7 @@ onMounted(() => {
           coordinates: [],
         },
       },
+      generateId: true,
     });
 
     map.value.addSource('lines', {
@@ -444,6 +488,7 @@ onMounted(() => {
           coordinates: [],
         },
       },
+      generateId: true,
     });
 
     map.value.addSource('pois', {
