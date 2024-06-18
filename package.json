@@ -12,8 +12,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@turf/bbox": "^7.0.0",
+    "@turf/helpers": "^7.0.0",
     "@vercel/analytics": "^1.0.1",
-    "leaflet": "^1.9.4",
+    "maplibre-gl": "^4.3.2",
     "vue": "^3.3.2",
     "vue-router": "^4.2.0"
   },
@@ -22,7 +24,6 @@
     "@tsconfig/node18": "^2.0.1",
     "@types/node": "^18.16.8",
     "@vitejs/plugin-vue": "^4.2.3",
-    "@vue-leaflet/vue-leaflet": "^0.10.1",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.3",
     "@vue/tsconfig": "^0.4.0",
