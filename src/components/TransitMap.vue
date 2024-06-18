@@ -460,8 +460,6 @@ onMounted(() => {
   });
 
   map.value.on('load', () => {
-    map.value.addControl(new NavigationControl(), 'top-right');
-
     /**
      * Initialize empty sources
      */
