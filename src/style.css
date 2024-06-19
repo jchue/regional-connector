@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply text-neutral-950;
+}
+
+p {
+  @apply mb-8;
+}
+
+ol,
+ul {
+  @apply mb-8;
+}
+
+a {
+  @apply text-blue-700;
+}
+
+a:hover {
+  @apply underline;
+}
+
+button {
+  @apply bg-neutral-950;
+  @apply border-2;
+  @apply border-neutral-950;
+  @apply cursor-pointer;
+  @apply font-bold;
+  @apply px-6 py-3;
+  @apply rounded-lg;
+  @apply text-xl;
+  @apply text-white;
+  @apply transition-shadow;
+}
+
+button.back {
+  @apply bg-white;
+  @apply rounded-r-none;
+  @apply text-neutral-950;
+}
+
+button.next {
+  @apply rounded-l-none;
+}
+
+button:hover {
+  @apply shadow-[0_0_1rem_#000];
+}

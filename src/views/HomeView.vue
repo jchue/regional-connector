@@ -41,7 +41,7 @@ onMounted(() => {
 <template>
   <div class="slide-container">
     <Slide layout="header">
-      <span class="title">LA Metro Regional Connector Explained</span>
+      <span class="font-bold mb-8 text-center text-6xl">LA Metro Regional Connector Explained</span>
     </Slide>
 
     <Slide layout="hero">
@@ -223,7 +223,7 @@ onMounted(() => {
 
     <Slide layout="figure-full" buttonLabel="Footnotes">
       <template v-slot:caption-top>
-        <p class="center" style="margin-bottom: 0">
+        <p class="text-center" style="margin-bottom: 0">
           Here is a before-after look at the entire system with the Regional Connector marked in
           black:
         </p>
@@ -236,7 +236,7 @@ onMounted(() => {
       </template>
 
       <template v-slot:caption-bottom>
-        <p class="center">
+        <p class="text-center">
           It is a relatively small length of track, but it completely revolutionizes and streamlines
           the LA Metro Rail system.
         </p>
@@ -244,10 +244,10 @@ onMounted(() => {
     </Slide>
 
     <Slide last="true">
-      <div style="display: flex; flex-direction: column; align-items: center; width: 100%">
-        <p class="center">Here are some resources if you want to learn more:</p>
+      <div class="flex flex-col items-center w-full">
+        <p>Here are some resources if you want to learn more:</p>
 
-        <ul>
+        <ul class="list-disc pl-4">
           <li>
             <a href="https://www.metro.net/moredtla/" target="_blank"
               >LA Metro Regional Connector Opening Site</a
@@ -267,15 +267,15 @@ onMounted(() => {
           </li>
         </ul>
 
-        <ul class="horizontal-list">
-          <li>
+        <ul>
+          <li class="sm:inline-block sm:border-r border-neutral-950 sm:px-6">
             <a
               href="https://www.dropbox.com/s/n26bfce3iwv5fbd/A%20Line_801_TT_06-16-23.pdf"
               target="_blank"
               >New <LineIcon line="a" /> Line Timetable</a
             >
           </li>
-          <li>
+          <li class="sm:inline-block sm:px-6">
             <a
               href="https://www.dropbox.com/s/gdatfhgct7etugu/E%20Line_804_TT_06-16-23.pdf"
               target="_blank"
