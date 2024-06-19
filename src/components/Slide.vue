@@ -1,5 +1,7 @@
 <script setup lang="ts">
-defineProps(['buttonLabel', 'last', 'layout']);
+import ButtonArrow from '@/components/ButtonArrow.vue';
+
+defineProps(['buttonArrow', 'buttonLabel', 'last', 'layout']);
 
 function back(e: Event) {
   const currentSlide = (e.currentTarget as HTMLElement).closest('.slide');
@@ -47,7 +49,9 @@ function next(e: Event) {
   >
     <slot></slot>
 
-    <button v-if="!last" v-on:click="next">{{ buttonLabel || 'Begin' }}</button>
+    <button v-if="!last" v-on:click="next" class="flex gap-2 items-center">
+      {{ buttonLabel || 'Begin' }} <ButtonArrow v-bind:direction="buttonArrow" />
+    </button>
   </div>
 
   <div
@@ -56,7 +60,9 @@ function next(e: Event) {
   >
     <slot></slot>
 
-    <button v-if="!last" v-on:click="next">{{ buttonLabel || 'Next' }}</button>
+    <button v-if="!last" v-on:click="next" class="flex gap-2 items-center">
+      {{ buttonLabel || 'Next' }} <ButtonArrow v-bind:direction="buttonArrow" />
+    </button>
   </div>
 
   <div
@@ -71,8 +77,8 @@ function next(e: Event) {
     <div class="flex flex-col justify-start md:justify-center px-8 lg:px-0">
       <slot></slot>
 
-      <button v-if="!last" v-on:click="next" class="next w-full md:w-auto">
-        {{ buttonLabel || 'Next' }}
+      <button v-if="!last" v-on:click="next" class="next flex gap-2 items-center w-full md:w-auto">
+        {{ buttonLabel || 'Next' }} <ButtonArrow v-bind:direction="buttonArrow" />
       </button>
     </div>
   </div>
@@ -90,10 +96,14 @@ function next(e: Event) {
     >
       <slot></slot>
 
-      <div class=" absolute bottom-0 left-0 md:left-auto right-0 p-2 flex gap-1 w-full md:w-auto">
+      <div class="absolute bottom-0 left-0 md:left-auto right-0 p-2 flex gap-1 w-full md:w-auto">
         <button v-on:click="back" class="back w-full md:w-auto">Back</button>
-        <button v-if="!last" v-on:click="next" class="next w-full md:w-auto">
-          {{ buttonLabel || 'Next' }}
+        <button
+          v-if="!last"
+          v-on:click="next"
+          class="next flex gap-2 items-center w-full md:w-auto"
+        >
+          {{ buttonLabel || 'Next' }} <ButtonArrow v-bind:direction="buttonArrow" />
         </button>
       </div>
     </div>
@@ -118,8 +128,12 @@ function next(e: Event) {
     <div class="flex flex-col justify-start md:justify-center px-8 lg:px-0">
       <slot name="caption-bottom"></slot>
 
-      <button v-if="!last" v-on:click="next" class="self-center w-full md:w-auto">
-        {{ buttonLabel || 'Next' }}
+      <button
+        v-if="!last"
+        v-on:click="next"
+        class="self-center flex gap-2 items-center w-full md:w-auto"
+      >
+        {{ buttonLabel || 'Next' }} <ButtonArrow v-bind:direction="buttonArrow" />
       </button>
     </div>
   </div>
@@ -127,8 +141,12 @@ function next(e: Event) {
   <div v-else class="slide flex items-center bg-white px-8 z-20">
     <slot></slot>
 
-    <button v-if="!last" v-on:click="next" class="self-center w-full md:w-auto">
-      {{ buttonLabel || 'Next' }}
+    <button
+      v-if="!last"
+      v-on:click="next"
+      class="self-center flex gap-2 items-center w-full md:w-auto"
+    >
+      {{ buttonLabel || 'Next' }} <ButtonArrow v-bind:direction="buttonArrow" />
     </button>
   </div>
 </template>

@@ -40,7 +40,7 @@ onMounted(() => {
 
 <template>
   <div class="slide-container">
-    <Slide layout="header">
+    <Slide layout="header" buttonArrow="right">
       <span class="font-bold mb-8 text-center text-6xl">LA Metro Regional Connector Explained</span>
     </Slide>
 
@@ -221,7 +221,7 @@ onMounted(() => {
       <p>That's it. And it takes less than 20 minutes.</p>
     </Slide>
 
-    <Slide layout="figure-full" buttonLabel="Footnotes">
+    <Slide layout="figure-full" buttonLabel="Footnotes" buttonArrow="down">
       <template v-slot:caption-top>
         <p class="text-center" style="margin-bottom: 0">
           Here is a before-after look at the entire system with the Regional Connector marked in
