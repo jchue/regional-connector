@@ -505,92 +505,39 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="map" ref="mapContainer"></div>
+  <div
+    ref="mapContainer"
+    class="!sticky top-0 shadow-[0_16px_16px_-16px_rgba(0,0,0,0.2)] md:shadow-none h-[50vh] md:h-screen min-w-full md:min-w-0 w-7/12 z-20 md:z-10"
+  ></div>
 </template>
 
 <style>
-#map {
-  position: sticky;
-  height: 100vh;
-  top: 0;
-  width: 60%;
-  z-index: 10;
-}
-
 .marker {
-  align-items: center;
-  background-color: black;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  font-family: 'Nimbus Sans L', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  height: 2rem;
-  justify-content: center;
-  width: 2rem;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply bg-neutral-950;
+  @apply cursor-pointer;
+  @apply font-sans;
+  @apply font-bold;
+  @apply rounded-full;
+  @apply text-base md:text-lg;
+  @apply text-white;
+  @apply h-8 md:h-9;
+  @apply w-8 md:w-9;
 }
 
 .maplibregl-popup {
-  max-width: none !important;
+  @apply !max-w-none;
 }
 
 .maplibregl-popup-content {
-  background-color: #fff !important;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.8);
-  font-family: 'Nimbus Sans L', Helvetica, Arial, sans-serif;
-  font-size: 0.8rem;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-}
-
-@media (max-width: 768px) {
-  #map {
-    box-shadow: 0 16px 16px -16px rgba(0, 0, 0, 0.2);
-    height: 50vh;
-    min-width: 100vw;
-    z-index: 20;
-  }
-}
-
-.icon {
-  text-align: center;
-  width: 60px;
-}
-
-.icon svg {
-  margin-top: -1rem;
-}
-
-.icon .icon-text {
-  display: block;
-  position: absolute;
-  text-align: center;
-  width: 48px;
-}
-
-.icon .icon-text span {
-  color: #fff;
-  display: block;
-  font-family: 'Nimbus Sans L', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: -8px;
-}
-
-.tooltip {
-  background-color: #fff !important;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.8);
-  font-family: 'Nimbus Sans L', Helvetica, Arial, sans-serif;
-  font-size: 0.8rem;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-}
-
-.tooltip::before {
-  display: none;
+  @apply bg-white;
+  @apply font-sans;
+  @apply font-semibold;
+  @apply px-4 py-2;
+  @apply rounded;
+  @apply shadow;
+  @apply text-xs md:text-sm;
 }
 </style>
