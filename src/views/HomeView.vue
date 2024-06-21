@@ -45,9 +45,9 @@ onMounted(() => {
     </Slide>
 
     <Slide layout="hero">
-      <p>The Regional Connector opened on June 16th. 🎉</p>
+      <p>The Regional Connector opened on June 16, 2023. 🎉</p>
 
-      <p>It is a complete game-changer for the LA Metro system. Here's why.</p>
+      <p>It was a complete game-changer for the LA Metro system. Here's why.</p>
     </Slide>
 
     <div>
@@ -57,7 +57,7 @@ onMounted(() => {
         <template v-slot:figure> </template>
 
         <div>
-          <p>This is a map of the LA Metro rail system before June 2023.</p>
+          <p>This is a map of the LA Metro Rail system before June 2023.</p>
 
           <p>
             The <LineIcon line="b" /> and <LineIcon line="d" /> Lines are heavy rail. The
@@ -67,7 +67,7 @@ onMounted(() => {
 
           <p>
             Notice the peculiar shape of the <LineIcon line="l" /> Line. And notice how most of the
-            lines seem to originate or terminate downtown. A relic of the days when most people
+            lines seemed to originate or terminate downtown. A relic of the days when most people
             commuted downtown for work, this is in and of itself suboptimal, since many, or even
             most, people do not want to go downtown anymore, and because it created a bottleneck.
           </p>
@@ -77,13 +77,13 @@ onMounted(() => {
       </Slide>
 
       <Slide layout="map" data-view="before-focus">
-        <p>Even though these lines go downtown, they terminate in different locations.</p>
+        <p>Even though these lines went downtown, they terminated in different locations.</p>
       </Slide>
 
       <Slide layout="map" data-view="route-before-overview">
         <p>
-          This means that if you were at the Natural History Museum and wanted to get to the
-          Japanese American National Museum, you would need to:
+          This meant that if you were at the Natural History Museum and wanted to get to the
+          Japanese American National Museum, you needed to:
         </p>
       </Slide>
 
@@ -99,7 +99,7 @@ onMounted(() => {
       <Slide layout="map" data-view="route-before-2">
         <p>
           Get off the train, head downstairs, transfer to the <LineIcon line="b" /> or
-          <LineIcon line="d" /> Line (arrives every 7.5 minutes if you are very lucky).
+          <LineIcon line="d" /> Line (arrives every 7.5 minutes if you were very lucky).
         </p>
       </Slide>
 
@@ -113,7 +113,7 @@ onMounted(() => {
       <Slide layout="map" data-view="route-before-4">
         <p>
           Get off the train, head upstairs, walk across the station to the platform of the
-          <LineIcon line="l" /> Line (arrives every 10 minutes if you are lucky).
+          <LineIcon line="l" /> Line (arrived every 10 minutes if you were lucky).
         </p>
       </Slide>
 
@@ -130,8 +130,8 @@ onMounted(() => {
 
       <Slide layout="map" data-view="regional-connector">
         <p>
-          The Regional Connector added a 1.9-mile tunnel to connect the disparate light-rail lines
-          in Downtown.
+          The Regional Connector project added a 1.9-mile tunnel to connect the disparate light-rail
+          lines in Downtown.
         </p>
       </Slide>
 
@@ -162,12 +162,12 @@ onMounted(() => {
       <Slide layout="map" data-view="l-line-split-new">
         <div>
           <p>
-            Except one thing. The E Line adopted the color of the former L Line and became the
+            Except one thing. The E Line adopted the gold color of the former L Line and became the
             <LineIcon line="e-new" /> Line.
           </p>
 
           <p>
-            Since the <LineIcon line="l" /> Line went away, a yellow <LineIcon line="e-new" /> is
+            Since the <LineIcon line="l" /> Line went away, a gold <LineIcon line="e-new" /> was
             easier than an aqua <LineIcon line="e-old" /> to differentiate from the blue
             <LineIcon line="a" />.
           </p>
@@ -207,7 +207,7 @@ onMounted(() => {
 
       <Slide layout="map" data-view="route-after">
         <div>
-          <p>With the Regional Connector completed, you only need to...</p>
+          <p>With the Regional Connector completed now, you only need to...</p>
 
           <p>
             ...board the <LineIcon line="e-new" /> Line at Expo Park/USC and ride seven stops until
@@ -237,7 +237,7 @@ onMounted(() => {
 
       <template v-slot:caption-bottom>
         <p class="text-center">
-          It is a relatively small length of track, but it completely revolutionizes and streamlines
+          It's a relatively short length of track, but it completely revolutionized and streamlined
           the LA Metro Rail system.
         </p>
       </template>
